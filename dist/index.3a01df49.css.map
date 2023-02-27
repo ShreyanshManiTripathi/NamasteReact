@@ -1,1 +1,0 @@
-{"mappings":"AAAA;;;;AAIA","sources":["style.css"],"sourcesContent":["button{\r\n    background-color: green;\r\n\r\n}\r\nbutton:hover{\r\n    background-color: pink;\r\n}"],"names":[],"version":3,"file":"index.3a01df49.css.map","sourceRoot":"/__parcel_source_root/"}
