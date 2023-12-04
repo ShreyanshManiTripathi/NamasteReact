@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactDOM from "react-dom/client";
+import Title from "./components/Title" ;
+
 
 document.getElementById('root').innerHTML='hi'
 const heading=React.createElement("h1",{},"Namaste Everyone hi");
@@ -2395,8 +2397,7 @@ const BurgerKing={
 // ?. Optional Chaining
 
 //Instead of writing props we can use {restaurant},it is behaving as props.
-const RestaurantCard=({name,lastMileTravelString,cuisines,cloudinaryImageId})=>{
-   
+
 // const{name,lastMileTravelString,cuisines,cloudinaryImageId}= restaurant.data.data
 
 //VIRTUAL DOM:-React uses representation of DOM which is known as virtual DOM.
@@ -2406,48 +2407,49 @@ const RestaurantCard=({name,lastMileTravelString,cuisines,cloudinaryImageId})=>{
 /*RECONCILIATION is an ALGORIHTM  that react uses   to note the difference
  between DOM and Virtual DOM which helps it in deteremining what needs and needs not to be change 
  or update in the UI. React does not renders whole changed UI .It only updates the changes*/
-
-
-// Reconciliation is one of the factor that makes react fast.
-
-
-/*
-KEY:-Key is like an id of components.Two componenets can never have same key.
-
-SIGNIFICANCE OF KEY:-
-
-If one parent has child with same name.e.g:-one body has two div and another third div is added then react gets 
-confused thinking which div is added.
-This doesn't happens with different child components like one img and other is div.
-So, in order to get rid of this ,concept of KEY is introduced.
-Key is like an id of components(div,img,span  etc.).
-
-
-
-Why shouldn't we use index as a key?
-
-
-//no key(not acceptable) < index key < unique key
-
-
-
-
-
-
-REACT FIBRE:-
-IT IS new RECONCILIATION engine introduced in REACT 16.IT is responsible for diff algorithm.
-
-*/
-
-
-
+ 
+ 
+ // Reconciliation is one of the factor that makes react fast.
+ 
+ 
+ /*
+ KEY:-Key is like an id of components.Two componenets can never have same key.
+ 
+ SIGNIFICANCE OF KEY:-
+ 
+ If one parent has child with same name.e.g:-one body has two div and another third div is added then react gets 
+ confused thinking which div is added.
+ This doesn't happens with different child components like one img and other is div.
+ So, in order to get rid of this ,concept of KEY is introduced.
+ Key is like an id of components(div,img,span  etc.).
+ 
+ 
+ 
+ Why shouldn't we use index as a key?
+ 
+ 
+ //no key(not acceptable) < index key(If you don't have anything) < unique key (Best Key)
+ 
+ 
+  
+ 
+ 
+ 
+ REACT FIBRE:-
+ It Is new RECONCILIATION engine introduced in REACT 16.IT is responsible for diff algorithm.
+ 
+ */
 
 
 
 
-    return(
 
 
+
+const RestaurantCard=({name,lastMileTravelString,cuisines,cloudinaryImageId})=>{
+return(
+  
+  
         <div className='card'>
 <img src={url+cloudinaryImageId}/>
    <h2 id="cuisine"> {cuisines.join(" , ")}</h2>
@@ -2459,21 +2461,25 @@ IT IS new RECONCILIATION engine introduced in REACT 16.IT is responsible for dif
 }
 
 
-
+ 
 
 const Body=()=>{
     return(
         <div className="restaurant-list">
         <React.Fragment>
-            <React.Fragment>
+            
 
               {
                 restaurantList.map((restaurant)=>{
 return <RestaurantCard{...restaurant.data.data}  key={restaurant.data.data.id}/>
-                })}
+
+
+                })
+                
+              }
         
           
-        </React.Fragment>                      
+                            
             </React.Fragment>
             </div>
     )
@@ -2501,10 +2507,10 @@ return(
 // }
 
 
-const Title= (
-    <img className='logo' src='https://yt3.googleusercontent.com/ytc/AL5GRJXudT76175T4x4n7eslWM1YkgNLHDSSqfXGoadl=s900-c-k-c0x00ffffff-no-rj' alt='logo'/>
+// const Title= (
+//     <img className='logo' src='https://yt3.googleusercontent.com/ytc/AL5GRJXudT76175T4x4n7eslWM1YkgNLHDSSqfXGoadl=s900-c-k-c0x00ffffff-no-rj' alt='logo'/>
 
-    )
+//     )
 const HeaderComponent=()=>{
     return (<div className="header" style={{backgroundColor:'#4a2632'}}>
 {Title} 
